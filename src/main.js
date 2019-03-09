@@ -6,10 +6,20 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+
+//导入element ui
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+
+Vue.use(ElementUI);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  components: {
+    App
+  },
+  render: h => h(App)
 })
